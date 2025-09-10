@@ -1,0 +1,36 @@
+export default function FeatureGrid() {
+  const features = [
+    {
+      title: "réduction des bruits",
+      text:
+        "Technologie audio qui filtre les sons inutiles pour un environnement d’apprentissage serein.",
+    },
+    {
+      title: "connected",
+      text:
+        "App de suivi: réglages personnalisés, statistiques et routines efficaces.",
+    },
+    {
+      title: "design épuré & portable",
+      text:
+        "Léger et robuste, pensé pour passer d’une salle à l’autre toute la journée.",
+    },
+    {
+      title: "garanties & SAV",
+      text: "Accompagnement réactif et extensions possibles pour vos établissements.",
+    },
+  ];
+
+  return (
+    <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+      {features.map((f) => (
+        <div key={f.title} className="space-y-3">
+          <h3 className="text-2xl font-semibold">{f.title}</h3>
+          <p className="opacity-70 leading-relaxed">{f.text}</p>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+
