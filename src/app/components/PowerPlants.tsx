@@ -14,7 +14,7 @@ export default function PowerPlants() {
           preload="metadata"
           playsInline
         >
-          <source src="/assets/Video.mp4" type="video/mp4" />
+          <source src="/assets/Video1.mp4" type="video/mp4" />
           <p className="text-white text-center p-4 sm:p-8 text-sm sm:text-base">
             Votre navigateur ne supporte pas la lecture de vidéos HTML5.
             <br />
