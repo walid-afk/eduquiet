@@ -12,11 +12,23 @@ export default function LoginPage() {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulation d'une connexion
-    setTimeout(() => {
-      setIsLoading(false);
-      alert("Fonctionnalité de connexion en cours de développement");
-    }, 1000);
+    // Vérification des identifiants admin
+    if (email === "admin@gmail.com" && password === "mdp123") {
+      // Connexion réussie
+      localStorage.setItem('isAuthenticated', 'true');
+      localStorage.setItem('userEmail', email);
+      
+      setTimeout(() => {
+        setIsLoading(false);
+        window.location.href = '/dashboard';
+      }, 1000);
+    } else {
+      // Identifiants incorrects
+      setTimeout(() => {
+        setIsLoading(false);
+        alert("Identifiants incorrects. Utilisez admin@gmail.com / mdp123");
+      }, 1000);
+    }
   };
 
   return (
@@ -94,7 +106,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#6c5ce7] hover:bg-[#5a4fcf] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6c5ce7] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#6c5ce7] hover:bg-[#5a4fcf] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6c5ce7] disabled:opacity-50 disabled:cursor-not-allowed btn-hover-lift"
               >
                 {isLoading ? "Connexion..." : "Se connecter"}
               </button>

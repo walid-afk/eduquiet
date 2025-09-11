@@ -2,7 +2,7 @@
 
 export default function ScienceSection() {
   return (
-    <section className="bg-black py-12 sm:py-16 lg:py-24">
+    <section id="technology" className="bg-black min-h-screen flex items-center">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
           {/* Left Section - Main Text */}

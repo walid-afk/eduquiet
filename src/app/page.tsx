@@ -47,7 +47,7 @@ export default function Home() {
       </section>
      
       {/* Contact Form */}
-      <section className="py-12 sm:py-16">
+      <section id="contact-form" className="py-12 sm:py-16">
         <ContactForm />
       </section>
       <WaveDivider flip />

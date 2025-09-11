@@ -57,3 +57,103 @@ body {
 .section-muted {
   background: var(--surface-muted);
 }
+
+/* Hero section enhancements */
+.bg-gradient-radial {
+  background: radial-gradient(circle, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.text-shadow-2xl {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Effet de particules subtil */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Effet de lumière douce */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(108, 92, 231, 0.5);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Animations pour les boutons */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes buttonBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Classes d'animation pour les boutons */
+.btn-hover-pulse:hover {
+  animation: buttonPulse 0.3s ease-in-out;
+}
+
+.btn-hover-shake:hover {
+  animation: buttonShake 0.4s ease-in-out;
+}
+
+.btn-hover-bounce:hover {
+  animation: buttonBounce 0.3s ease-in-out;
+}
+
+.btn-hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-hover-glow:hover {
+  box-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}

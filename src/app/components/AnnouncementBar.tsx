@@ -12,12 +12,14 @@ const logos = [
 export default function AnnouncementBar() {
   return (
 
-<div className="bg-[#f5f5dc] py-4 w-full overflow-hidden">
-      <div className="flex animate-scroll gap-12 items-center whitespace-nowrap">
+<div className="bg-[#f5f5dc] py-4 w-full overflow-hidden relative z-10">
+      <div className="flex animate-scroll gap-50 items-center whitespace-nowrap">
         {/* Multiple sets for seamless infinite loop */}
         {[...Array(4)].map((_, setIndex) => 
           logos.map((logo, i) => (
-            <div key={`set-${setIndex}-${i}`} className="flex-shrink-0 h-8 w-auto opacity-100 hover:opacity-80 transition-opacity">
+            <div key={`set-${setIndex}-${i}`} className={`flex-shrink-0 h-8 w-auto opacity-100 hover:opacity-80 transition-opacity ${
+              logo === "logos/lefigaro.png" ? "scale-300" : ""
+            }`}>
               <Image
                 src={`/${logo}`}
                 alt="Partner logo"

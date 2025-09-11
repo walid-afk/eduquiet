@@ -8,14 +8,14 @@ export default function TestimonialCTA() {
       </p>
       <div className="flex gap-3">
         <a
-          href="#contact"
-          className="rounded-full border border-black/[.12] dark:border-white/[.18] px-5 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]"
+          href="#contact-form"
+          className="rounded-full border border-black/[.12] dark:border-white/[.18] px-5 py-2 text-sm hover:bg-[#6c5ce7] hover:text-white dark:hover:bg-[#6c5ce7] transition-colors btn-hover-scale"
         >
           demander une démo
         </a>
         <a
-          href="#contact"
-          className="rounded-full border border-transparent bg-[#6c5ce7] text-white px-5 py-2 text-sm hover:opacity-90"
+          href="#contact-form"
+          className="rounded-full border border-transparent bg-[#6c5ce7] text-white px-5 py-2 text-sm hover:opacity-90 transition-opacity btn-hover-lift"
         >
           parler à un expert
         </a>
