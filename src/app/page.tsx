@@ -4,7 +4,6 @@ import FeatureGrid from "./components/FeatureGrid";
 import PowerPlants from "./components/PowerPlants";
 import TestimonialCTA from "./components/TestimonialCTA";
 import SpecificationsSection from "./components/SpecificationsSection";
-import TestimonialsSection from "./components/TestimonialsSection";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import WaveDivider from "./components/WaveDivider";

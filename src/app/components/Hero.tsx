@@ -26,7 +26,7 @@ export default function Hero() {
               <span className="sm:hidden"> </span>partout.
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
-              La technologie audio française qui révolutionne l'éducation
+              La technologie audio française qui révolutionne l&apos;éducation
             </p>
           </div>
         </div>
