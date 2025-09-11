@@ -3,7 +3,6 @@
 import AnnouncementBar from "./AnnouncementBar";
 import ModelViewer from "./ModelViewer";
 import ScienceSection from "./ScienceSection";
-import Image from "next/image";
 
 export default function Hero() {
   return (

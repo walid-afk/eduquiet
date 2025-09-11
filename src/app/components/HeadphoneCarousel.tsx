@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 interface Headphone {
   id: string;
@@ -116,7 +115,7 @@ export default function HeadphoneCarousel({ headphones }: HeadphoneCarouselProps
                         <span className="text-2xl">⏱️</span>
                       </div>
                       <div>
-                        <p className="text-sm text-gray-600">Temps d'usage</p>
+                        <p className="text-sm text-gray-600">Temps d&apos;usage</p>
                         <p className="text-2xl font-bold text-gray-900">
                           {headphone.totalUsageHours}h
                         </p>

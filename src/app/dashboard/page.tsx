@@ -97,7 +97,7 @@ const mockHeadphones: Headphone[] = [
 
 export default function DashboardPage() {
   const router = useRouter();
-  const [headphones, setHeadphones] = useState<Headphone[]>(mockHeadphones);
+  const [headphones] = useState<Headphone[]>(mockHeadphones);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -178,7 +178,7 @@ export default function DashboardPage() {
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Temps d'utilisation moyen par jour
+              Temps d&apos;utilisation moyen par jour
             </h2>
             
             <div className="space-y-4">
