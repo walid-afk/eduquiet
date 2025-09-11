@@ -22,11 +22,11 @@ export default function FeatureGrid() {
   ];
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+    <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
       {features.map((f) => (
-        <div key={f.title} className="space-y-3">
-          <h3 className="text-2xl font-semibold">{f.title}</h3>
-          <p className="opacity-70 leading-relaxed">{f.text}</p>
+        <div key={f.title} className="space-y-3 sm:space-y-4">
+          <h3 className="text-xl sm:text-2xl font-semibold leading-tight">{f.title}</h3>
+          <p className="opacity-70 leading-relaxed text-sm sm:text-base">{f.text}</p>
         </div>
       ))}
     </section>

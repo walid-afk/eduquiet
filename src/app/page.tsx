@@ -24,15 +24,15 @@ export default function Home() {
       <WaveDivider />
 
       {/* Specifications Section */}
-      <section className="py-16 sm:py-24">
+      <section className="py-12 sm:py-16 lg:py-24">
         <SpecificationsSection />
       </section>
 
       <WaveDivider flip />
 
       {/* Feature grid (white) */}
-      <section id="features" className="bg-white text-[#111] pt-12 sm:pt-20 pb-4 sm:pb-8">
-        <div className="mx-auto max-w-6xl px-6 sm:px-10">
+      <section id="features" className="bg-white text-[#111] pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-12">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
           <FeatureGrid />
         </div>
       </section>
@@ -40,28 +40,28 @@ export default function Home() {
       <WaveDivider />
 
       {/* Power plants (black full-bleed) */}
-      <section className="bg-black text-white py-16 sm:py-28">
-        <div className="mx-auto max-w-6xl px-6 sm:px-10">
+      <section className="bg-black text-white py-12 sm:py-16 lg:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
           <PowerPlants />
         </div>
-      </section>    
-      <WaveDivider flip/>
-      <section className="py-16 sm:py-0">
-        <TestimonialsSection />
       </section>
-      <WaveDivider />
+     
       {/* Contact Form */}
-      <section className="py-16 sm:py-2">
+      <section className="py-12 sm:py-16">
         <ContactForm />
       </section>
       <WaveDivider flip />
 
       {/* Testimonial + CTA (white) */}
-      <section id="contact" className="bg-white text-[#111] py-12 sm:py-20">
-        <div className="mx-auto max-w-6xl px-6 sm:px-10">
+      <section id="contact" className="bg-white text-[#111] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
           <TestimonialCTA />
         </div>
       </section>
+     
+
+{/* App Section */}
+  
 
       <WaveDivider />
       <Footer />

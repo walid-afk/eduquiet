@@ -53,7 +53,7 @@ export default function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white text-sm sm:text-base min-h-[48px]"
                   placeholder="Votre nom complet"
                 />
               </div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white text-sm sm:text-base min-h-[48px]"
                   placeholder="votre@email.com"
                 />
               </div>
@@ -88,7 +88,7 @@ export default function ContactForm() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white text-sm sm:text-base min-h-[48px]"
                 placeholder="Sujet de votre message"
               />
             </div>
@@ -105,7 +105,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white resize-none text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 placeholder-gray-400 text-white resize-none text-sm sm:text-base min-h-[48px]"
                 placeholder="Décrivez votre demande en détail..."
               />
             </div>
@@ -114,7 +114,7 @@ export default function ContactForm() {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gray-800 border border-gray-600 text-white font-semibold rounded-lg sm:rounded-xl hover:bg-gray-700 hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gray-800 border border-gray-600 text-white font-semibold rounded-lg sm:rounded-xl hover:bg-gray-700 hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base min-h-[48px] w-full sm:w-auto"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

@@ -1,38 +1,76 @@
 "use client";
 
-import { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, Environment, useFBX, Html } from "@react-three/drei";
+import { OrbitControls, Environment, useFBX, Html, Box } from "@react-three/drei";
 import * as THREE from "three";
 
+// Error Boundary pour gérer les erreurs de chargement 3D
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(_error: Error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Erreur dans le composant 3D:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+
+    return this.props.children;
+  }
+}
+
 function FBXModel({ rotationY }: { rotationY: number }) {
+  const [modelError, setModelError] = useState(false);
+  const [modelLoaded, setModelLoaded] = useState(false);
+  
   const fbx = useFBX("/model.fbx");
   const { camera } = useThree();
 
   useEffect(() => {
-    fbx.traverse((child) => {
-      if ((child as THREE.Mesh).isMesh) {
-        const mesh = child as THREE.Mesh;
-        mesh.castShadow = true;
-        mesh.receiveShadow = true;
-        const material = mesh.material as THREE.Material | THREE.Material[] | undefined;
-        if (Array.isArray(material)) {
-          material.forEach((m) => {
-            const std = m as THREE.MeshStandardMaterial;
-            if (std && "metalness" in std) {
-              std.metalness = 0.2;
-              std.roughness = 0.8;
+    try {
+      if (fbx && fbx.children.length > 0) {
+        fbx.traverse((child) => {
+          if ((child as THREE.Mesh).isMesh) {
+            const mesh = child as THREE.Mesh;
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+            const material = mesh.material as THREE.Material | THREE.Material[] | undefined;
+            if (Array.isArray(material)) {
+              material.forEach((m) => {
+                const std = m as THREE.MeshStandardMaterial;
+                if (std && "metalness" in std) {
+                  std.metalness = 0.2;
+                  std.roughness = 0.8;
+                }
+              });
+            } else if (material) {
+              const std = material as THREE.MeshStandardMaterial;
+              if (std && "metalness" in std) {
+                std.metalness = 0.2;
+                std.roughness = 0.8;
+              }
             }
-          });
-        } else if (material) {
-          const std = material as THREE.MeshStandardMaterial;
-          if (std && "metalness" in std) {
-            std.metalness = 0.2;
-            std.roughness = 0.8;
           }
-        }
+        });
+        setModelLoaded(true);
       }
-    });
+    } catch (error) {
+      console.error('Erreur lors du chargement du modèle 3D:', error);
+      setModelError(true);
+    }
   }, [fbx]);
 
   // Auto-fit scale if model is huge/tiny
@@ -63,6 +101,39 @@ function FBXModel({ rotationY }: { rotationY: number }) {
   }, [box, camera, scale]);
 
   // External rotation binding
+  if (modelError) {
+    // Fallback avec un modèle simple
+    return (
+      <group rotation-y={THREE.MathUtils.degToRad(rotationY)}>
+        <Box args={[2, 1.5, 1]} position={[0, 0, 0]}>
+          <meshStandardMaterial color="#4a5568" metalness={0.2} roughness={0.8} />
+        </Box>
+        <Box args={[0.3, 0.3, 0.1]} position={[-0.8, 0.3, 0.5]}>
+          <meshStandardMaterial color="#2d3748" metalness={0.3} roughness={0.7} />
+        </Box>
+        <Box args={[0.3, 0.3, 0.1]} position={[0.8, 0.3, 0.5]}>
+          <meshStandardMaterial color="#2d3748" metalness={0.3} roughness={0.7} />
+        </Box>
+        <Html center>
+          <div className="text-white text-center p-2 bg-black/30 rounded text-xs">
+            Version simplifiée
+          </div>
+        </Html>
+      </group>
+    );
+  }
+  
+  if (!modelLoaded) {
+    return (
+      <Html center>
+        <div className="text-white text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-2"></div>
+          <p className="text-sm">Chargement du modèle 3D...</p>
+        </div>
+      </Html>
+    );
+  }
+  
   return <primitive object={fbx} rotation-y={THREE.MathUtils.degToRad(rotationY)} />;
 }
 
@@ -167,7 +238,7 @@ export default function ModelViewer() {
 
 
   return (
-    <div ref={containerRef} className="w-full h-[72vh] sm:h-[82vh] relative mb-5 pb-0">
+    <div ref={containerRef} className="hidden sm:block w-full h-[72vh] sm:h-[82vh] relative mb-5 pb-0">
       {/* Rotational selling points (textes par-dessus le casque), order: left, right, left */}
       {[{id:"h1",text:"Réduction des bruits inutiles",side:"left" as const},
         {id:"h3",text:"Design épuré et portable",side:"right" as const},
@@ -210,8 +281,24 @@ export default function ModelViewer() {
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
-        <Suspense fallback={<Html center style={{ color: "white", fontSize: 14 }}>Chargement…</Html>}>
-          <FBXModel rotationY={rotationDeg} />
+        <Suspense fallback={
+          <Html center>
+            <div className="text-white text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-2"></div>
+              <p className="text-sm">Chargement du modèle 3D...</p>
+            </div>
+          </Html>
+        }>
+          <ErrorBoundary fallback={
+            <Html center>
+              <div className="text-white text-center p-4 bg-black/50 rounded-lg">
+                <p className="text-sm">Modèle 3D temporairement indisponible</p>
+                <p className="text-xs mt-2">Chargement d&apos;une version de secours...</p>
+              </div>
+            </Html>
+          }>
+            <FBXModel rotationY={rotationDeg} />
+          </ErrorBoundary>
           <Environment preset="city" />
         </Suspense>
         <OrbitControls

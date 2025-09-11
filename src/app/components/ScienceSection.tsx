@@ -2,12 +2,12 @@
 
 export default function ScienceSection() {
   return (
-    <section className="bg-black py-16 sm:py-24 border-0 outline-none">
-      <div className="mx-auto max-w-6xl px-6 sm:px-10 border-0 outline-none">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 border-0 outline-none">
+    <section className="bg-black py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
           {/* Left Section - Main Text */}
-          <div className="flex-1 lg:max-w-md border-0 outline-none text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight border-0 outline-none">
+          <div className="flex-1 lg:max-w-md text-center lg:text-left order-2 lg:order-1">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
               Travaillez dans le calme.
               <br />
               EduQuiet s&apos;occupe
@@ -17,10 +17,10 @@ export default function ScienceSection() {
           </div>
 
           {/* Middle Section - Abstract Shape */}
-          <div className="flex-shrink-0 w-24 h-36 sm:w-32 sm:h-48 lg:w-40 lg:h-56 border-0 outline-none order-first lg:order-none">
+          <div className="flex-shrink-0 w-20 h-28 sm:w-24 sm:h-36 lg:w-32 lg:h-48 xl:w-40 xl:h-56 order-1 lg:order-2">
             <svg
               viewBox="0 0 200 300"
-              className="w-full h-full border-0 outline-none"
+              className="w-full h-full"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -31,18 +31,15 @@ export default function ScienceSection() {
             </svg>
           </div>
 
-          {/* Right Section - Description and Button */}
-          <div className="flex-1 lg:max-w-md border-0 outline-none text-center lg:text-left">
-            <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed mb-6 border-0 outline-none">
+          {/* Right Section - Description */}
+          <div className="flex-1 lg:max-w-md text-center lg:text-left order-3">
+            <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
               Nous avons développé notre technologie audio de suppression de bruit 
               en partenariat avec Focal, leader français du casque audio. 
               Nos ingénieurs ont optimisé l&apos;algorithme pour les environnements 
               éducatifs, réduisant le stress des enseignants et améliorant 
               leur bien-être au travail.
             </p>
-            <button className="bg-white text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full font-medium hover:bg-gray-200 transition-colors duration-200 border-0 outline-none text-sm sm:text-base">
-              Notre Technologie
-            </button>
           </div>
         </div>
       </div>
