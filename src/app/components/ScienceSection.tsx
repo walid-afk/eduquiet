@@ -8,11 +8,11 @@ export default function ScienceSection() {
           {/* Left Section - Main Text */}
           <div className="flex-1 lg:max-w-md text-center lg:text-left order-2 lg:order-1">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-              Travaillez dans le calme.
+              Un bijou de technologie.
               <br />
-              EduQuiet s&apos;occupe
+              Made in France,
               <br />
-              du reste.
+              pour les professeurs.
             </h2>
           </div>
 
@@ -34,11 +34,10 @@ export default function ScienceSection() {
           {/* Right Section - Description */}
           <div className="flex-1 lg:max-w-md text-center lg:text-left order-3">
             <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
-              Nous avons développé notre technologie audio de suppression de bruit 
-              en partenariat avec Focal, leader français du casque audio. 
-              Nos ingénieurs ont optimisé l&apos;algorithme pour les environnements 
-              éducatifs, réduisant le stress des enseignants et améliorant 
-              leur bien-être au travail.
+              Notre IA analyse les bruits extérieurs et renvoie un signal inverse pour les annuler. 
+              Entraînée sur plus d&apos;1 To de sons divers, elle filtre tout le bruit. 
+              Nous travaillons avec Focal, leader français des casques audio. 
+              Cerise sur le gâteau : nous sommes français et fiers de l&apos;être.
             </p>
           </div>
         </div>

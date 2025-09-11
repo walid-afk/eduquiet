@@ -35,7 +35,7 @@ export default function Header() {
       <div className="flex items-center justify-between py-3 sm:py-4 px-4 sm:px-6 lg:px-10">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-lg sm:text-xl font-semibold">EduQuiet</h1>
+            <h1 className="text-lg sm:text-xl font-semibold text-[#6c5ce7]">EduQuiet</h1>
           </div>
 
           {/* Navigation */}

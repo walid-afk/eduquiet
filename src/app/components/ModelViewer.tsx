@@ -240,14 +240,14 @@ export default function ModelViewer() {
   return (
     <div ref={containerRef} className="hidden sm:block w-full h-[72vh] sm:h-[82vh] relative mb-5 pb-0">
       {/* Rotational selling points (textes par-dessus le casque), order: left, right, left */}
-      {[{id:"h1",text:"Réduction des bruits inutiles",side:"left" as const},
-        {id:"h3",text:"Design épuré et portable",side:"right" as const},
-        {id:"h2",text:"Concentration mesurée par l'app",side:"left" as const}].map((h, i) => {
+      {[{id:"h1",text:"Efficacité jusqu'à 200dB",side:"left" as const},
+        {id:"h3",text:"200g, aussi léger qu'un paquet d'allumettes",side:"right" as const},
+        {id:"h2",text:"Made in France avec Focal",side:"left" as const}].map((h, i) => {
         const start = 30 * (i + 1); // Apparition à 30°, 60°, 90°
         const visible = rotationDeg >= start;
         const opacity = visible ? Math.min(1, (rotationDeg - start) / 20) : 0; // Fade in progressif sur 20°
-        const sideClass = h.side === "left" ? "left-4 sm:left-10" : "right-4 sm:right-10";
-        const topPercent = i === 0 ? "15%" : i === 1 ? "35%" : "55%";
+        const sideClass = h.side === "left" ? "left-2 sm:left-6" : "right-2 sm:right-6";
+        const topPercent = i === 0 ? "20%" : i === 1 ? "40%" : "60%";
         return (
           <div
             key={h.id}

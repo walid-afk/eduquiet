@@ -1,23 +1,23 @@
 export default function FeatureGrid() {
   const features = [
     {
-      title: "réduction des bruits",
+      title: "Cocon de sérénité",
       text:
-        "Technologie audio qui filtre les sons inutiles pour un environnement d’apprentissage serein.",
+        "Notre IA filtre tous les bruits extérieurs. Plus de stress lié au bruit constant des lycées, des rues parisiennes ou de la maison.",
     },
     {
-      title: "connected",
+      title: "Made in France",
       text:
-        "App de suivi: réglages personnalisés, statistiques et routines efficaces.",
+        "Nous sommes français et fiers de l'être. Notre casque est conçu en partenariat avec Focal, leader français des casques audio.",
     },
     {
-      title: "design épuré & portable",
+      title: "Ultra-léger",
       text:
-        "Léger et robuste, pensé pour passer d’une salle à l’autre toute la journée.",
+        "200g seulement. Aussi léger qu'un paquet d'allumettes. Contrairement aux gros casques de chantier, le nôtre est discret et confortable.",
     },
     {
-      title: "garanties & SAV",
-      text: "Accompagnement réactif et extensions possibles pour vos établissements.",
+      title: "Efficacité garantie",
+      text: "Jusqu'à 200 décibels d'efficacité. Sauf si une météorite tombe à côté de vous, vous ne remarquerez rien.",
     },
   ];
 

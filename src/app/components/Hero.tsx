@@ -22,11 +22,11 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center text-white max-w-4xl">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 drop-shadow-lg leading-tight">
-              Travailler dans le calme,<br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>partout.
+              150 000 Amina<br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>méritent le calme.
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
-              La technologie audio française qui révolutionne l&apos;éducation
+              93% des professeurs font un burnout. Il est encore temps de les sauver.
             </p>
           </div>
         </div>

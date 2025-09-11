@@ -8,22 +8,22 @@ export default function SpecificationsSection() {
   const content = {
     overview: {
       left: {
-        title: "280g",
-        description: "Poids ultra-léger optimisé pour le port prolongé en classe. Confort exceptionnel même lors de journées de 8h d'enseignement."
+        title: "200g",
+        description: "Aussi léger qu'un paquet d'allumettes. Quand on pense casque anti-bruit, on pense souvent gros casque de chantier. Au contraire, le nôtre est ultra-léger."
       },
       middle: {
         title: "Focal",
-        description: "Technologie audio française de pointe. Suppression de bruit active avec algorithmes spécialement développés pour les environnements éducatifs."
+        description: "Leader français des casques audio. Nous sommes français et fiers de l'être. Notre casque est made in France, conçu avec l'expertise de Focal."
       },
       right: {
-        title: "Design",
-        description: "Design épuré et professionnel. Couleurs sobres s'intégrant parfaitement dans l'environnement scolaire sans distraction."
+        title: "200dB",
+        description: "Efficacité jusqu'à 200 décibels. Sauf si une météorite tombe à côté de vous, vous ne remarquerez rien. Notre IA filtre tous les bruits."
       }
     },
     technical: {
       left: {
-        title: "Audio",
-        description: "Suppression de bruit active jusqu'à -35dB. Qualité audio premium avec sons relaxants intégrés pour améliorer la concentration."
+        title: "IA",
+        description: "Notre IA analyse les bruits extérieurs et renvoie un signal inverse pour les annuler. Entraînée sur plus d'1 To de sons divers et variés."
       },
       middle: {
         title: "Batterie",
@@ -66,7 +66,7 @@ export default function SpecificationsSection() {
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
-              Overview
+              Aperçu
             </button>
             <button 
               onClick={() => setActiveTab("technical")}
@@ -76,7 +76,7 @@ export default function SpecificationsSection() {
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
-              Technical
+              Technique
             </button>
             <button 
               onClick={() => setActiveTab("size")}
@@ -86,7 +86,7 @@ export default function SpecificationsSection() {
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
-              Size
+              Taille
             </button>
           </div>
         </div>

@@ -7,38 +7,38 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      title: "Enfin du calme dans ma classe",
-      content: "En tant que professeur de lycée, j'ai toujours eu du mal à me concentrer avec le bruit des élèves. Depuis que j'utilise EduQuiet, je peux enfin préparer mes cours dans le calme, même pendant les récréations. Ma productivité a doublé !",
+      title: "Plus de burnout pour moi",
+      content: "Avant EduQuiet, je rentrais épuisée tous les soirs à cause du bruit constant du lycée et des rues parisiennes. Maintenant, je retrouve ma sérénité. Je ne fais plus partie des 93% de professeurs en burnout.",
+      rating: 5,
+      reviewer: "Amina T., Professeure de Mathématiques"
+    },
+    {
+      title: "Fini les antidépresseurs",
+      content: "J'avais tout essayé : boules quies, méditation, antidépresseurs. Rien ne fonctionnait vraiment. Avec EduQuiet, j'ai enfin trouvé mon cocon de sérénité. Je peux enseigner sans stress.",
       rating: 5,
       reviewer: "Marie L., Professeure de Français"
     },
     {
-      title: "Moins d'arrêts maladie",
-      content: "En tant que directrice d'établissement, j'ai constaté une nette diminution des arrêts maladie de mes enseignants depuis l'installation des casques EduQuiet. L'investissement s'est rentabilisé en 6 mois grâce aux économies réalisées.",
+      title: "Made in France, ça compte",
+      content: "Ce qui me plaît avec EduQuiet, c'est que c'est français ! Focal est un leader qu'on connaît. Le casque fait 200g seulement, aussi léger qu'un paquet d'allumettes. Parfait pour mes journées de cours.",
       rating: 5,
-      reviewer: "Claire M., Directrice d'école"
+      reviewer: "Pierre D., Professeur de Physique"
     },
     {
-      title: "Technologie impressionnante",
-      content: "La suppression de bruit est vraiment efficace. Je peux travailler dans mon bureau même quand il y a des travaux dans l'école. Le design est élégant et les sons relaxants m'aident à me concentrer.",
-      rating: 5,
-      reviewer: "Pierre D., Professeur de Mathématiques"
-    },
-    {
-      title: "Solution parfaite pour Paris",
-      content: "Travailler dans le centre de Paris avec tout ce bruit était un vrai défi. EduQuiet m'a permis de retrouver ma sérénité et ma capacité de concentration. Je recommande vivement à tous mes collègues.",
+      title: "200 décibels d'efficacité",
+      content: "L'IA filtre vraiment tous les bruits. Sauf si une météorite tombe à côté, je ne remarque rien ! Plus de stress lié au bruit. Je me sens enfin protégée dans mon environnement de travail.",
       rating: 5,
       reviewer: "Sophie R., Professeure d'Histoire"
     },
     {
-      title: "Investissement rentable",
-      content: "Nous avons équipé tout notre établissement avec EduQuiet. Les enseignants sont plus détendus, moins stressés, et nous avons réduit nos coûts liés aux arrêts maladie de 40%. Un excellent retour sur investissement.",
+      title: "Nos professeurs restent",
+      content: "Avant, 55% de nos enseignants souhaitaient quitter la profession. Avec EduQuiet, ils retrouvent le goût d'enseigner. L'investissement nous sauve nos équipes pédagogiques.",
       rating: 5,
       reviewer: "Jean-Baptiste K., Proviseur"
     },
     {
-      title: "Label 'Cœur de Profs' mérité",
-      content: "Après 3 mois d'utilisation, notre école a obtenu le label 'Cœur de Profs'. Nos enseignants sont plus épanouis et nos résultats scolaires se sont améliorés. EduQuiet a transformé notre environnement de travail.",
+      title: "Pour toutes les Amina",
+      content: "Nous avons perdu une collègue précieuse. Si EduQuiet avait existé plus tôt, elle serait encore parmi nous. Maintenant, nous protégeons toutes nos enseignantes avec cette technologie.",
       rating: 5,
       reviewer: "Isabelle T., Directrice pédagogique"
     }

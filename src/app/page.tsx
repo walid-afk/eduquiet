@@ -20,7 +20,7 @@ export default function Home() {
         
       </section>
 
-      <WaveDivider />
+      <WaveDivider className="hidden sm:block" />
 
       {/* Specifications Section */}
       <section className="py-12 sm:py-16 lg:py-24">
@@ -41,7 +41,8 @@ export default function Home() {
       {/* Power plants (black full-bleed) */}
       <section className="bg-black text-white py-12 sm:py-16 lg:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-          <PowerPlants />
+      
+        <PowerPlants />
         </div>
       </section>
      
